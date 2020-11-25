@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/vs2015.min.css"
+    />
+    <link rel="stylesheet" href="style2.css">
+    <title>IT Tools</title>
+  </head>
+  <body>
+    <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">IT TOOLS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME </a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="syllabus.html">SYLLABUS</a>
+            </li>
+            <li class="nav-item dropdown  active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                TOPICS
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">New Tags in Html5</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">LINK</a>
+              </li>
+          </ul>
+          </form>
+        </div>
+      </nav>
+    </div> 
+  </header>
+  <div class="container my-4">
+    <h1>Fieldset Tag</h1>
+    <h2>Definition and Usage</h2>
+      <p>
+      The &lt;fieldset&gt; tag is used to group related elements in a form.
+      
+      The &lt;fieldset&gt; tag draws a box around the related elements.
+    </p>
+    <a href="./sourceCode/fieldset.html" target="_Omkar">
+    <button type="button" class="btn btn-dark" >Output on Browser</button>
+    </a>
+    <pre class="language-html"><code id="myInput">&lt!DOCTYPE html&gt
+&lthead&gt
+&lttitle&gtDocument&lt/title&gt
+&lt/head&gt
+&ltbody&gt
+&ltfieldset&gt
+  &ltlegend&gtRegitration Page&lt/legend&gt
+  &ltform&gt
+    &ltinput type="text" name="username" placeholder="Enter Username" /&gt &ltbr/&gt &ltbr/&gt
+    &ltinput
+      type="text"
+      name="userPass"
+      placeholder="Enter Password"
+    /&gt&ltbr /&gt&ltbr /&gt
+    &ltinput type="submit" value="Regiter" /&gt
+  &lt/form&gt
+&lt/fieldset&gt
+&lt/body&gt
+&lt/html&gt</code></pre>
+  </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"
+    ></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+      </script>
+    <script>
+      function disableScrolling() {
+        console.log("Disable scrolling");
+        let x = window.scrollX;
+        let y = window.scrollY;
+        window.onscroll = function () {
+          window.scrollTo(x, y);
+        };
+      }
+
+      function enableScrolling() {
+        console.log("Enable scrolling");
+        window.onscroll = function () {};
+      }
+
+      //  Add copy button
+      let pres = document.getElementsByTagName("pre");
+      Array.from(pres).forEach((element2) => {
+        let element = document.createElement("button");
+        element.setAttribute("class", "btn btn-dark my-2");
+        element.innerHTML = "Copy To Clipboard";
+        element.style.float = "top";
+
+        element.addEventListener("click", (e) => {
+          e.preventDefault();
+          disableScrolling();
+          console.log(e);
+          let x = window.screenX;
+          let y = window.screenY;
+
+          element.innerHTML = "Copied!";
+          let tarea = document.createElement("textarea");
+          tarea.innerHTML = element.parentElement.children[1].innerText;
+          document.body.append(tarea);
+          tarea.focus();
+          tarea.select();
+          document.execCommand("copy");
+          tarea.style.display = "none";
+          setTimeout(() => {
+            element.innerHTML = "Copy";
+          }, 2000);
+          setTimeout(() => {
+            enableScrolling();
+          }, 20);
+        });
+        element2.insertBefore(element, element2.children[0]);
+      });
+    </script>
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

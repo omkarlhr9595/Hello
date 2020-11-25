@@ -1,0 +1,76 @@
+.banner {
+  position: relative;
+  background: url(bg.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 250px 0 200px;
+}
+.banner h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.8em;
+  font-weight: 1000;
+  color: #262626;
+  text-transform: uppercase;
+}
+.banner p {
+  margin: 1em 0 0;
+  padding: 0;
+  font-size: 1.2em;
+  line-height: 1.5 em;
+  color: #262626;
+}
+header {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+.navbar {
+  padding: 20px 0;
+}
+.navbar-brand {
+  font-weight: 800;
+  font-size: 2em;
+  color: #262626;
+}
+.nav-item {
+  font-weight: 800;
+}
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+  background: #262626;
+  color: #fff;
+}
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+  color: #fff;
+  padding: 5px 15px;
+}
+.navbar-light .navbar-toggler {
+  border: none;
+  color: #fff;
+  border: 2px solid #7f7f7f;
+  border-radius: 0;
+  outline: none;
+}
+.dropdown-menu {
+  background: #e8e9e4;
+  border: none;
+  border-radius: 0;
+  padding: -12;
+}
+.dropdown-item:hover {
+  background: #262626;
+  color: #fff;
+  padding: 5px 15px;
+}
+.navbar-collapse {
+  background: #e8e9e4;
+}
+@media (max-width: 768px) {
+  .banner {
+    padding: 300px 0 250px;
+  }
+  .banner h2 {
+    font-size: 1.8em;
+  }
+}

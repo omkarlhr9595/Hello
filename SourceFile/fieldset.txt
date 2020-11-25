@@ -1,0 +1,23 @@
+&lt!DOCTYPE html&gt
+  &lthead&gt
+    &lttitle&gtDocument&lt/title&gt
+  &lt/head&gt
+  &ltbody&gt
+    &ltfieldset&gt
+      &ltlegend&gtRegitration Page&lt/legend&gt
+      &ltform&gt
+        &ltinput
+          type="text"
+          name="username"
+          placeholder="Enter Username"
+        /&gt&ltbr /&gt&ltbr /&gt
+        &ltinput
+          type="text"
+          name="userPass"
+          placeholder="Enter Password"
+        /&gt&ltbr /&gt&ltbr /&gt
+        &ltinput type="submit" value="Regiter" /&gt
+      &lt/form&gt
+    &lt/fieldset&gt
+  &lt/body&gt
+&lt/html&gt
