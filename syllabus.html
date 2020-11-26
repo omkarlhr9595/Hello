@@ -97,13 +97,17 @@
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
               <script type="text/javascript">
                 document.addEventListener("adobe_dc_view_sdk.ready", function(){
-                  var adobeDCView = new AdobeDC.View({clientId: "<YOUR_CLIENT_ID>", divId: "adobe-dc-view"});
+                  var adobeDCView = new AdobeDC.View({clientId: "a40a40d083c24efaa27e37e44278e939", divId: "adobe-dc-view"});
                   adobeDCView.previewFile({
                     content:{ location: 
-                      { url: "https://pdfhost.io/v/YoH3vrvHz_Microsoft_Word_Replace_SrNo21SFNPW02_June201516_All_Syllabus_Science_BSc_IT_IIrd_Yr_SemIII_IV.pdf"}},
-                    metaData:{fileName: "Syllabus"}
-                  },
-                  {
+                      { 
+                        url: "sy.pdf"
+                      }
+                   },
+                    metaData:{
+                      fileName: "Syllabus"
+                     }
+                  }, {
                     embedMode: "SIZED_CONTAINER"
                   });
                 });
