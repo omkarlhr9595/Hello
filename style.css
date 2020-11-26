@@ -1,7 +1,7 @@
 .banner {
   position: relative;
   background: url(bg.jpg);
-  min-height: 100vh;
+  min-height: 130vh;
   background-size: cover;
   background-position: center;
   padding: 250px 0 200px;
@@ -65,6 +65,36 @@ header {
 }
 .navbar-collapse {
   background: #e8e9e4;
+}
+#scroll {
+  position:fixed;
+  right:10px;
+  bottom:10px;
+  cursor:pointer;
+  width:50px;
+  height:50px;
+  background-color:#4d4d4da2;
+  text-indent:-9999px;
+  display:none;
+  -webkit-border-radius:60px;
+  -moz-border-radius:60px;
+  border-radius:60px
+}
+#scroll span {
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-8px;
+  margin-top:-12px;
+  height:0;
+  width:0;
+  border:8px solid transparent;
+  border-bottom-color:#ffffff;
+}
+#scroll:hover {
+  background-color:#000000ce;
+  opacity:1;filter:"alpha(opacity=100)";
+  -ms-filter:"alpha(opacity=100)";
 }
 @media (max-width: 768px) {
   .banner {
