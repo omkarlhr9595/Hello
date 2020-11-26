@@ -21,6 +21,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/vs2015.min.css"
     />
     <link rel="stylesheet" href="style2.css">
+    <link rel="styleSheet" href="style.css>
     <title>IT Tools</title>
   </head>
   <body>
@@ -205,6 +206,7 @@
 &lt/body&gt
 &lt/html&gt</code></pre>
   </div>
+  <a href="#" id="scroll" style="display: none;"><span></span></a>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -218,6 +220,25 @@
         hljs.initHighlightingOnLoad();
       </script>
     <script>
+   
+  //Add Scroll back-to-top button in jQuery
+      $(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#scroll').fadeIn();
+        } else {
+            $('#scroll').fadeOut();
+        }
+    });
+    $('#scroll').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+});
+
+      
       function disableScrolling() {
         console.log("Disable scrolling");
         let x = window.scrollX;
